@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+	<meta name="description" content="Welcome to the most extraordinary restaurant">
+    <meta name="keywords" content="Restaurant,Reunion Table,in chennai">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+	<link rel="stylesheet" type='text/css' href="style.css"> 
+	<title>Reunion Table | Visit</title>
+</head>
+<body>
+    <header>
+	   <nav id='navbar1'>
+		    <div class='container'>
+		       <h1 class='logo'>
+		        <a href='home.html'><span><i class="fas fa-concierge-bell"></i>Reunion Table</span></a>
+		       </h1>
+		       <ul>
+			       <li><a href='home.html'>Home</a></li>
+			       <li><a href='story.html'>Story</a></li>
+			       <li><a class='current' href='visit.html'>Visit</a></li>
+			       <li><a href='gallery.html'>Gallery</a></li>
+		        </ul>
+		    </div>		
+		</nav>
+	</header>
+	<main>
+	    <section>
+			<h3><center>— MAKE A RESERVATION —</center></h3>
+			<h4><center>Once favorite thing to make for dinner is reservations</center></h4>
+			<center><a href='#table'><button type='button' value='FIND A TABLE' id='btn'>FIND A TABLE</button></a></center>
+			<img src='./img/visit.jpg'>
+		</section>
+	    <article id='table'>
+		    <section>
+			    <center><h2>Make Online Rservation</span></h2></center>
+				<form id='form'>
+				    <div class='f-1'>
+				    <input type='text' name='name' id='name' placeholder='Full name' required>
+					<select name='persons' id='persons' required>
+			            <option>1 person</option>
+			            <option>2 persons</option>
+			            <option>3 persons</option>
+			            <option>4 persons</option>
+			            <option>5 persons</option>
+						<option>More than 5</option>
+			        </select>
+					</div>
+					
+					<div class='f-2'>
+					<input type='tel' name='ph-no' id='phoneno' placeholder='Phone number'>
+					<input type='date' name='date' id='date' required>
+					</div>
+					
+					<div class='f-3'>
+					<input type='email' name='emailid' id='email' placeholder='E-mail address'>
+					<input type='time' id='time' name='time' required>
+					</div>
+					<center>
+					<button id='btn' type='submit'>Reserve A Table</button>
+					</center>
+				</form>
+				
+			</section>
+		</article>
+		<section>
+		    <p><center><b>Credit cards we gladly accept</b></center><p>
+			<p><center>Visa</center><p>
+			<p><center>Mastercard</center><p>
+			<p><center>AmEx</center><p>
+			<center><a href='eat.html'><button type='button' value='VIEW ENTREES MENU' id='btn'>VIEW ENTREES MENU</button></a></center>
+			<hr>
+		</section>
+	</main>
+	<footer>
+	    <table>
+			<tr>
+			    <td>
+				    <ul>
+						<li><b>Contact</b></li>
+						<li>206-555-7890</li>
+						<li>No 21 NGO Street</li>
+						<li>Anna Nagar,Chennai</li>
+						<li><img src="./img/logos.jpg" class='logos' usemap='#map'/></li>
+				    </ul>
+				</td>
+				<td>
+				    <span class='footer'><h2>—  R e u n i o n  T a b l e  —</h2></span>
+				</td>
+				<td>
+				    <ul>
+						<li><b>Hours</b></li>
+						<li>Mon–Wed  6–11</li>
+						<li>Thu–Sat  4–12</li>
+						<li>Sun  3–10</li>
+						<li><a href='visit.html'><span>Make a Reservation</span></a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<map name="map">
+			<area shape="circle" coords="15,6,5" alt="Coffee" href="https://twitter.com">
+			<area shape="rect" coords="30,3,60,12" alt="Computer" href="https://www.facebook.com/">
+			<area shape="rect" coords="57,2,92,26" alt="Phone" href="https://www.instagram.com/">
+        </map>
+	</footer>
+</body>	
+</html>
