@@ -251,7 +251,9 @@ footer span{
 	max-width: 100px;
 	height: 20px;
 }
-
+.loc{
+	cursor: pointer;
+}
 @media only screen and (max-width: 600px) {
 	video{
 	   background-size: cover;
