@@ -32,7 +32,7 @@
 	    </video>	
 	
 	    <section class='content'>
-		    <p>No 21 NGO Street - Anna Nagar,Chennai-106 - 206-555-7890</p>
+		    <p onclick="getLocation()">No 21 NGO Street - Anna Nagar,Chennai-106 - 206-555-7890</p></br></br>
 		    <div class='contentlist'>
 			    <a href='eat.html'><span class='list1'>EAT</span></a>
 			</div>
@@ -43,6 +43,24 @@
 			    <a href='visit.html'><span class='list3'>VISIT</span></a>
 			</div>
 		</section>
+		
+		<audio loop autoplay>
+			<source src="music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio> 
     </article>
+	
+	<script>
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else { 
+				alert("Geolocation is not supported by this browser");
+			}
+		}
+		function showPosition(position) {
+			alert("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+        }
+	</script>
 </body>
 </html>
