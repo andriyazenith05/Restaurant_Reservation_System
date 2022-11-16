@@ -161,7 +161,7 @@ section table tr td{
 	width:30%;
 }
 .storybg{
-	background: url('./img/story.jpg') no-repeat center;
+	background: url('story.jpg') no-repeat center;
 	background-size: cover;
 	height: 100vh;
     position: relative;
