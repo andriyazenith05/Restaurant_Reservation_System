@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee Details</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  <style>
+    * {
+      font-size: 14px;
+    }
+
+    #heading {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #custtable {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #custtable td,
+    #custtable th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #custtable tr:nth-child(even) {
+      background-color: #daf0f7;
+    }
+
+    #custtable tr:hover {
+      background-color: #ddd;
+    }
+
+    #custtable th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #146b9e;
+      color: white;
+    }
+  </style>
+</head>
+
+<body ng-app="employeeApp">
+  <div align="center">
+    <b>
+      <p id="heading">CUSTOMER DETAILS</p>
+    </b>
+  </div>
+  <div ng-controller="employeeCtrl">
+    <table align="center" id="custtable">
+      <tr>
+        <th>NAME</th>
+        <th>MOBILE NUMBER</th>
+        <th>EMAIL ID</th>
+        <th>NO OF GUESTS</th>
+        <th>DATE</th>
+        <th>TIME</th>
+      </tr>
+      <tr ng-repeat="employee in employees|orderBy : 'name'|limitTo:5">
+        <td>{{employee.name | uppercase}}</td>
+        <td>{{employee.mobNo}}</td>
+        <td>{{employee.emailId}}</td>
+        <td>{{employee.noOfguests}}</td>
+        <td>{{employee.date | date}}</td>
+        <td>{{employee.time}}</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>
