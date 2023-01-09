@@ -1,0 +1,9 @@
+<!DOCTYPE restaurant [
+<!ELEMENT details (name,mobileno,address,capacity,status,timings)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT mobileno (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT capacity (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT timings (#PCDATA)>
+]>

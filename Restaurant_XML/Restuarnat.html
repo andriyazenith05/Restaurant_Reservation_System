@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+  </style>
+  <title>Lab4</title>
+</head>
+
+<body>
+
+  <table id="demo1"></table>
+  <table id="demo2"></table>
+  <script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+      }
+    };
+    xhttp.open("GET", "Restaurant.xml", true);
+    xhttp.send();
+
+    function myFunction(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var table = "<tr><th>Name</th><th>Mobile No</th><th>Address</th><th>Capacity</th><th>Status</th><th>Timing</th></tr>";
+      var x = xmlDoc.getElementsByTagName("details");
+      for (i = 0; i < x.length; i++) {
+        table += "<tr><td>" +
+          x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("mobileno")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("address")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("capacity")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("status")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("timings")[0].childNodes[0].nodeValue +
+          "</td></tr>";
+      }
+      document.getElementById("demo1").innerHTML = table;
+    }
+  </script>
+
+</body>
+
+</html>

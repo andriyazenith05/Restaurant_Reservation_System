@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Restaurant.xsl"?>
+<restaurant xmlns:h="http://www.w3.org/TR/html4/">
+	<details>
+		<name>Buhari Restaurant</name>
+		<mobileno>7356896300</mobileno>
+		<address>Gandhi Main Road</address>
+		<capacity>50</capacity>
+		<status>Vacant</status>
+		<timings>8:00 am to 11:00 pm</timings>
+	</details>
+	
+	<details>
+		<name>Sri Balaji Restaurant</name>
+		<mobileno>7367521786</mobileno>
+		<address>Ring Road</address>
+		<capacity>40</capacity>
+		<status>Vacant</status>
+		<timings>7:00 am to 10:00 pm</timings>
+	</details>
+	
+	<details>
+		<name>Udupi Hotel</name>
+		<mobileno>7456778532</mobileno>
+		<address>SRT Colony</address>
+		<capacity>50</capacity>
+		<status>Full</status>
+		<timings>8:00 am to 10:00 pm</timings>
+	</details>
+	
+	<details>
+		<name>Punjabi Dabba</name>
+		<mobileno>7457937661</mobileno>
+		<address>Ganga Street</address>
+		<capacity>60</capacity>
+		<status>Vacant</status>
+		<timings>9:00 am to 12:00 pm</timings>
+	</details>
+	
+	<details>
+		<name>Santhosh Dabba</name>
+		<mobileno>7456487661</mobileno>
+		<address>MRR Colony</address>
+		<capacity>50</capacity>
+		<status>Vacant</status>
+		<timings>8:00 am to 12:00 pm</timings>
+	</details>
+	
+</restaurant>
