@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Zenith",
+    "mobNo": "9840633676",
+    "emailId": "zeni@gmail.com",
+    "noOfguests": "3",
+    "date": "27/12/2022",
+    "time": "10:00 AM"
+  },
+  {
+    "name": "Joseph",
+    "mobNo": "9829638712",
+    "emailId": "jesi@gmail.com",
+    "noOfguests": "5",
+    "date": "03/01/2023",
+    "time": "01:00 PM"
+  },
+  {
+    "name": "Andriya",
+    "mobNo": "8278653865",
+    "emailId": "andriya@gmail.com",
+    "noOfguests": "10",
+    "date": "15/01/2023",
+    "time": "11:00 AM"
+  },
+  {
+    "name": "Annet",
+    "mobNo": "8283786212",
+    "emailId": "annet@gmail.com",
+    "noOfguests": "6",
+    "date": "02/01/2023",
+    "time": "09:00 AM"
+  },
+  {
+    "name": "Raj",
+    "mobNo": "8478675251",
+    "emailId": "raj@gmail.com",
+    "noOfguests": "8",
+    "date": "11/01/2023",
+    "time": "08:00 PM"
+  },
+  {
+    "name": "Vikram",
+    "mobNo": "9878675251",
+    "emailId": "vikram@gmail.com",
+    "noOfguests": "7",
+    "date": "21/01/2023",
+    "time": "10:00 PM"
+  }
+]
