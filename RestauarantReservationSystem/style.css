@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+   scroll-behavior: smooth;
+}
+  
+.indexbody, .storybody {
+  font-family: 'Balsamiq Sans', cursive;
+  background: #fff;
+  color: #333; 
+  line-height: 1.6em;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: white;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1.2;
+  font-family: 'Balsamiq Sans', cursive;
+  font-variant: small-caps;
+  padding-bottom: 20px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  margin: 15px 0;
+}
+img {
+  width: 100%;
+}
+.clr {
+  clear: both;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: auto;
+}
+#navbar {
+  background-color: #333;
+  color: white;
+  overflow: auto;
+  opacity:0.8;
+}
+#navbar1 {
+  color: white;
+  overflow: auto;
+}
+#navbar a{
+   color: white;
+}
+#navbar1 a {
+   color: black;
+}
+#navbar .logo{
+  float: left;
+  padding-top: 20px;
+  font-size: 19px;
+}
+#navbar1 .logo {
+  float: left;
+  padding-top: 20px;
+  font-size: 19px;
+}
+#navbar ul{
+  list-style: none;
+  float: right;
+}
+#navbar1 ul {
+  list-style: none;
+  float: right;
+}
+#navbar ul li{
+  float: left;
+} 
+#navbar1 ul li{
+  float: left;
+}  
+#navbar ul li a{
+  display:inline-block;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+#navbar1 ul li a {
+  display:inline-block;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+#navbar ul li a:hover ,#navbar ul li a.current,.logo span,.footer, #navbar1 ul li a.current {
+  color: #f79518;
+}
+video{
+	background-size: cover;
+	width:100vw;
+    position: fixed;
+    color: #fff;
+}
+.content {
+  font-family: 'Balsamiq Sans', cursive;
+  font-variant: small-caps;	
+  position: fixed;
+  top: 26%;
+  color: white;
+  width: 100%;
+  padding: 23px;
+  font-size: 17px;
+  text-align: center;
+}
+.content p{
+	padding-bottom:15px;
+}
+.contentlist{
+	display:inline-block;
+	font-size: 50px;
+}
+.contentlist .list1,.list2,.list3{
+	padding: 80px;
+}
+.contentlist .list1:hover{
+	text-decoration:underline;
+}
+.contentlist .list2:hover{
+	text-decoration:underline;
+}
+.contentlist .list3:hover{
+	text-decoration:underline;
+}
+table,section{
+	margin:10px;
+}
+table tr,td p,section p{
+	font-family: 'Grandstander', cursive;
+}
+section table tr td{
+	text-align:center;
+}
+.drink table{
+	margin-left:35%;
+}
+.drink table tr td,.story table tr td{
+	padding:10px;
+}
+.story table{
+	margin-left:10px;
+	font-size: 13px;
+}
+.story table td{
+	width:30%;
+}
+.storybg{
+	background: url('./img/story.jpg') no-repeat center;
+	background-size: cover;
+	height: 100vh;
+    position: relative;
+    color: #fff;
+}
+.storybg h2{
+  position: relative;
+  top: 40%;
+  color: white;
+  width: 100%;
+  padding: 23px;
+  font-size: 55px;
+  text-align: center;
+}
+.f-1 , .f-2 , .f-3{
+	margin:20px;
+	padding: 0px 250px;
+	text-align: center;
+}	
+input[type] , select{
+	padding:10px;
+}	
+input , select{
+	width: 40%;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+[class*="col-"] {
+    float: left;
+    padding: 0px;	
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;} 
+.row img{
+	height:350px;
+}	
+.row{
+	margin:0px;
+}
+#btn{
+	font-family: 'Balsamiq Sans', cursive;
+    cursor: pointer;
+    display: inline-block;	
+	background: white;
+	color: black;
+	border: 1px solid black;
+    border-radius: 2px;
+	padding: 12px;
+	margin:40px;
+	font-size:14px;
+}
+#btn:hover{
+	background-color: #333;
+	color:white;
+}
+footer table{
+	margin: 10px;
+	font-size:13px;
+}
+footer table tr td{
+	padding :100px;
+}
+footer span{
+	cursor: pointer;
+	color: gray;
+}
+.logos{
+	max-width: 100px;
+	height: 20px;
+}
+.loc{
+	cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+	video{
+	   background-size: cover;
+	   width:100vw;
+	   height:100vh;
+       position: fixed;
+       color: #fff;
+    }
+	.contentlist{
+	   display:block;
+	   font-size: 30px;
+	   margin:20px;
+    }
+	.contentlist .list1,.list2,.list3{
+	   padding: 10px;
+    }
+	.indexbody{
+		background-color: #333;
+	}
+	footer tr td{
+		display:block;
+		text-align: center;
+	}
+	footer table tr td{
+	   padding :50px;
+	   margin-left:20px;
+    }
+	.drink table{
+	    margin-left:10%;
+    }
+	form input,select{
+		display:block;
+		text-align:center;
+  }
+  #form{
+    background-color: none;
+  }
+	.f-1 , .f-2 , .f-3{
+	   margin:10px;
+	   padding:10px;
+    }	
+    input[type] , select{
+	   padding:10px;
+    }	
+    input , select{
+	   width: 50%;
+    }
+}
