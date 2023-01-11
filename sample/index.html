@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <link rel="stylesheet" type='text/css' href="style.css">
+  <title>Sample</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: white;
+      font-variant: small-caps;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      font-family: Arial, Helvetica, sans-serif;
+      font-variant: small-caps;
+      padding-bottom: 20px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    #navbar {
+      height: 60px;
+      background-color: #333;
+      color: white;
+      overflow: auto;
+      opacity: 0.7;
+    }
+
+    .logo img {
+      border-radius: 50%;
+      width: 40px;
+      height: 30px;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+    }
+
+    #navbar .logo a span {
+      position: relative;
+      top: 0px;
+      left: 60px;
+    }
+
+    #navbar .logo {
+      float: left;
+      padding-top: 20px;
+      font-size: 19px;
+    }
+
+    #navbar ul {
+      list-style: none;
+      float: right;
+    }
+
+    #navbar ul li {
+      float: left;
+    }
+
+    #navbar ul li a {
+      display: inline-block;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    article .headerimg img {
+      width: 100%;
+      height: 447px;
+    }
+
+    #samplepg {
+      margin: 20px;
+      font-size: 15px;
+      line-height: 1.5em;
+      text-align: justify;
+    }
+
+    #samplepg h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id='navbar'>
+      <h1 class='logo'>
+        <a href='/'><img
+            src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"><span><b>Title
+              Name</b></span></a>
+      </h1>
+      <ul>
+        <li><a class='current' href='/'><b>Home</b></a></li>
+        <li><a href='#samplepg'><b>Story</b></a></li>
+        <li><a href='/admin'><b>Admin</b></a></li>
+      </ul>
+    </nav>
+  </header>
+  <article>
+    <div class="headerimg">
+      <img src="https://149345965.v2.pressablecdn.com/wp-content/uploads/img-hotels-IADGV_006-Dusk-Exterior-home.jpg"
+        alt="No image found">
+    </div>
+    <section id="samplepg">
+      <h2>Title1</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente at perspiciatis totam porro consequatur
+        libero sed! Consectetur error voluptas similique neque, facere numquam. Consequuntur vitae sunt voluptates
+        necessitatibus. Aliquid illo, ipsam, quo natus nemo harum minus amet porro voluptatum ullam voluptates, aperiam
+        reiciendis excepturi ad? Animi quisquam qui ad facilis nihil iste beatae, praesentium laudantium sint, similique
+        dolores veniam aspernatur accusantium tempore culpa. Aspernatur reiciendis, ipsam provident praesentium aliquid
+        dicta tempore quisquam aperiam commodi nisi debitis esse doloribus soluta reprehenderit dignissimos rerum
+        doloremque dolores deleniti eum? Placeat quae unde sit inventore, omnis cum vero nemo quidem esse? Aliquid eos
+        impedit maxime quam odit adipisci officiis pariatur earum repellendus ullam. Magnam sed error enim ex voluptatum
+        suscipit distinctio ducimus deserunt voluptatibus unde sapiente pariatur odit veritatis voluptates, porro
+        quibusdam nostrum illum tenetur exercitationem ab voluptas eaque! Praesentium molestiae error beatae suscipit
+        blanditiis. Hic quis ex dicta dolor suscipit explicabo, laboriosam mollitia omnis neque maiores aut pariatur
+        blanditiis vero aliquid placeat. Non enim quidem repellendus corporis odit architecto illum animi quasi,
+        deleniti assumenda ad explicabo numquam est cumque recusandae minima. Necessitatibus totam dolorem iste maxime,
+        vel voluptatibus architecto. Delectus reprehenderit adipisci ipsam corporis? Velit ipsa neque rerum, quos vel ut
+        porro unde.</p>
+    </section>
+  </article>
+  <script>
+    var exdays = 5;
+
+    function setCookie(name, value, exp) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      var cookie = name + "=" + encodeURIComponent(value) + "; " + expires;
+      document.cookie = cookie;
+    }
+
+    function getCookie(name) {
+      var cookieArr = document.cookie.split(";");
+      for (var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        if (name == cookiePair[0].trim()) {
+          return decodeURIComponent(cookiePair[1]);
+        }
+      }
+      return null;
+    }
+
+    function checkCookie() {
+      var name = getCookie("name");
+      if (name != null) {
+        alert("Welcome again, " + name);
+      } else {
+        name = prompt("Please enter your name:");
+        if (name != "" && name != null) {
+          setCookie("name", name, exdays);
+        }
+      }
+    }
+
+    /*function display() {
+      var value = document.getElementById("color").value;
+      if (value != "Select Color") {
+        document.bgColor = value;
+        document.cookie = "color=" + value;
+      }
+    }*/
+
+    window.onload = function () {
+      checkCookie();
+      /*if (document.cookie.length != 0) {
+        var array = document.cookie.split("=");
+        document.getElementById("color").value = array[1];
+        document.bgColor = array[1];
+      }*/
+    } 
+  </script>
+</body>
+
+</html>

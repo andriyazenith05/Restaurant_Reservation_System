@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+  <div ng-app="myApp" ng-controller="namesCtrl">
+
+    <p>Looping with objects:</p>
+    <ul>
+      <li ng-repeat="x in names | orderBy:'country' | filter : 'i'">
+        {{ x.name + ', ' + x.country }}
+      </li>
+    </ul>
+
+    <p>Type a letter in the input field:</p>
+    <p><input type="text" ng-model="test"></p>
+    <ul>
+      <li ng-repeat="x in names | filter:test">
+        {{ x }}
+      </li>
+    </ul>
+
+  </div>
+
+  <script>
+    angular.module('myApp', []).controller('namesCtrl', function ($scope) {
+      $scope.names = [
+        { name: 'Jani', country: 'Norway' },
+        { name: 'Carl', country: 'Sweden' },
+        { name: 'Margareth', country: 'England' },
+        { name: 'Hege', country: 'Norway' },
+        { name: 'Joe', country: 'Denmark' },
+        { name: 'Gustav', country: 'Sweden' },
+        { name: 'Birgit', country: 'Denmark' },
+        { name: 'Mary', country: 'England' },
+        { name: 'Kai', country: 'Norway' }
+      ];
+    });
+  </script>
+
+</body>
+
+<!--
+
+<body>
+
+  <ul ng-app="myApp" ng-controller="namesCtrl">
+    <li ng-repeat="x in names">
+      {{x | myFormat}}
+    </li>
+  </ul>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.filter('myFormat', function () {
+      return function (x) {
+        var i, c, txt = "";
+        for (i = 0; i < x.length; i++) {
+          c = x[i];
+          if (i % 2 == 0) {
+            c = c.toUpperCase();
+          }
+          txt += c;
+        }
+        return txt;
+      };
+    });
+    app.controller('namesCtrl', function ($scope) {
+      $scope.names = [
+        'Jani',
+        'Carl',
+        'Margareth',
+        'Hege',
+        'Joe',
+        'Gustav',
+        'Birgit',
+        'Mary',
+        'Kai'
+      ];
+    });
+  </script>
+
+  <p>Make your own filters.</p>
+  <p>This filter, called "myFormat", will uppercase every other character.</p>
+</body>
+-->
+
+<!--
+  currency Format a number to a currency format.
+  date Format a date to a specified format.
+  filter Select a subset of items from an array.
+  json Format an object to a JSON string.
+  limitTo Limits an array/string, into a specified number of elements/characters.
+  lowercase Format a string to lower case.
+  number Format a number to a string.
+  orderBy Orders an array by an expression.
+  uppercase Format a string to upper case.
+
+-->
+
+</html>

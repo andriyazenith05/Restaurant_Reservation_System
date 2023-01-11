@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 25px;
+      background-color: #f0ae74;
+      font-size: 20px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px;
+    }
+
+    button {
+      background-color: #7e580c;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Welcome Again !</h2>
+  </header>
+  <article>
+    <section>
+      <form method='post' action='/insert'>
+        <div>
+          <h1>Insert Student Details</h1>
+          Id: <input type="number" name="id" /><br>
+          Name: <input type="text" name="name" /><br>
+          Reg No: <input type="text" name="regno" /><br>
+          Date of Birth: <input type="date" name="dob" /><br>
+          <center><button type='submit'>INSERT</button></center>
+        </div>
+      </form>
+    </section>
+    <section>
+      <form method='post' action='/update'>
+        <div>
+          <h1>Update Student Details</h1>
+          Enter Student Id: <input type="number" name="stud_id" /><br>
+          Choose the data to be edited:
+          <select name="upd_data" id="custdata">
+            <option value="stud_name">Name</option>
+            <option value="stud_regno">Reg No</option>
+            <option value="stud_dob">Date of Birth</option>
+          </select>
+          <input type="text" name="upd_value">
+          <center><button type='submit'>UPDATE</button></center>
+        </div>
+      </form>
+    </section>
+    <section>
+      <form method='post' action='/delete'>
+        <div>
+          <h1>Delete Student Record</h1>
+          Enter Student Id: <input type="number" name="del_stud" /><br>
+          <center><button type='submit'>DELETE</button></center>
+        </div>
+      </form>
+    </section>
+    <section>
+      <form method='post' action='/search'>
+        <div>
+          <h1>Search Student Record</h1>
+          Enter student id: <input type="number" name="search_stud" /><br>
+          <center><button type='submit'>SEARCH</button></center>
+        </div>
+      </form>
+    </section>
+    <section>
+      <form method='post' action='/display'>
+        <div>
+          <h1>Click here to display all customer records</h1>
+          <center><button type='submit'>DISPLAY</button></center>
+        </div>
+      </form>
+    </section>
+  </article>
+</body>
+
+</html>
